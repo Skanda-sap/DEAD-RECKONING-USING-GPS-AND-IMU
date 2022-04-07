@@ -1,0 +1,5 @@
+<launch>
+<node pkg="imu_driver" name="imu_talker" type="imu_main.py" output="screen" />
+<node pkg="gps_driver" name="gps_talker" type="gps_main.py" output="screen" />
+<node name="record" pkg="rosbag" type="record" output="screen" args="-a -O /home/vicky/fusion.bag"/>
+</launch>
